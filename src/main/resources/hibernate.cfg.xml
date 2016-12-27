@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- 数据库连接信息 -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test3?createDatabaseIfNotExist=true</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<!-- 数据库方言 -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- 配置是否显示Hibernate生成的SQL语句 -->
+		<property name="show_sql">true</property>
+		<!-- 格式化显示Hibernate生成的SQL语句 -->
+		<property name="format_sql">true</property>
+		<!-- 配置自动根据映射文件更新数据表 -->
+		<property name="hbm2ddl.auto">update</property>
+		<!-- 配置currentSession的上下文环境 -->
+		<property name="hibernate.current_session_context_class">thread</property>
+		<!-- 配置实体映射文件（或实体类） -->
+		<mapping class="com.hc.entity.User"/>
+		<mapping class="com.hc.bean.Dept"/>
+		<mapping class="com.hc.bean.Emp"/>
+		<mapping class="com.hc.entity.User2"/>
+		<mapping class="com.hc.bean.IDcrat"></mapping>
+		<mapping class="com.hc.bean.Person"></mapping>
+	</session-factory>
+</hibernate-configuration>
